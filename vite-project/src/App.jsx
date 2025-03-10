@@ -1,7 +1,17 @@
+import Preview from "./componets/Preview"
+import "./style/App.css"
+
 function App() {
   return (
     <>
-    <p>test</p>
+    <div className="body">
+      <div className="information">
+        <p>test</p>
+      </div>
+      <div className="preview">
+        <Preview />
+      </div>
+    </div>
     </>
   )
 }
