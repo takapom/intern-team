@@ -18,9 +18,9 @@ function App() {
   return (
     <>
     <Information />
-    {/* <InfomationContext.Provider value={[value, setValue]}>
+    <InfomationContext.Provider value={[value, setValue]}>
       <InputItem />
-    </InfomationContext.Provider> */}
+    </InfomationContext.Provider>
     <Preview />
     </>
   );
