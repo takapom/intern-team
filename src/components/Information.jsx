@@ -1,6 +1,6 @@
 import React from 'react';
 import "../style/information.css"
-import Input from './Input_library';
+import Input from './Input.jsx';
 
 const Information = () => {
   return (
@@ -9,7 +9,7 @@ const Information = () => {
             <h2>情報入力欄</h2>
         </div>
         <div className='input-form'>
-            <Input />
+          <Input />
         </div>
     </div>
   )
