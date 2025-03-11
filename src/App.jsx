@@ -1,5 +1,5 @@
 import Preview from "./componets/Preview"
-import "./style/App.css"
+import "./App.css"
 
 function App() {
   return (
