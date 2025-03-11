@@ -1,8 +1,9 @@
 .preview-main{
-    background-color: #f0f0f0;
+    background-color: white;
     width: 35em;
     height: 20em;
     margin-left: 2em;
+    border: 1px solid #000;
 }
 h2{
     padding: 0em;
@@ -13,14 +14,74 @@ h2{
     height: 3em;
 }
 .preview-bukkenmei{
-    text-align: center;
-    border: 1px solid #000;
+    align-content: center;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
     width: 18em;
     margin-right: 2.5em;
 }
 .preview-yachin{
-    text-align: center;
-    border: 1px solid #000;
+    align-content: center;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
     width: 12em;
     margin-left: 2.5em;
+}
+.preview-body{
+    display: flex;
+    margin : 0.5em;
+    height: 16em;
+    width: 34em;
+}
+.preview-images{
+    width: 10em;
+}
+.preview-gaikan{
+    height: 7.625em;
+    width: 10em;
+    border: 1px solid #000;
+    align-content: center;
+    margin-bottom: 0.5em;
+}
+.preview-naikan{
+    height: 7.625em;
+    width: 10em;
+    border: 1px solid #000;
+    align-content: center;
+}
+.preview-shosai{
+    width: 24em;
+    margin-left: 0.5em;
+}
+.preview-info{
+    display: flex;
+}
+.preview-madori{
+    width: 10em;
+    height: 12em;
+    border: 1px solid #000;
+    align-content: center;
+}
+.preview-otherinfo{
+    align-content: center;
+    margin-left: 0.5em;
+}
+.preview-access_placeholder{
+    align-content: center;
+    margin-bottom: 0.5em;
+    border: 1px solid #000;
+    height: 3.25em;
+    width: 12.75em;
+}
+.preview-joken_placeholder{
+    align-content: center;
+    border: 1px solid #000;
+    height: 8.125em;
+    width: 12.75em;
+}
+.preview-bukken_info_placeholder{
+    align-content: center;
+    margin-top: 0.5em;
+    border: 1px solid #000;
+    height: 3.25em;
 }
