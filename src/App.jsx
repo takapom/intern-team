@@ -22,7 +22,7 @@ function App() {
       const imgData = canvas.toDataURL('image/svg', 1.0);
       let pdf = new jsPDF();
       pdf.addImage(imgData, 'SVG', 5, 10, canvas.width / 18, canvas.height / 18);
-      pdf.save(`out.pdf`);
+      pdf.save(`preview.pdf`);
     });
   };
   return (
