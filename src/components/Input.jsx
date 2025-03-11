@@ -1,76 +1,37 @@
-import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import React, { useContext, useState } from 'react';
+import { InfomationContext } from '../App.jsx';
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
-    },
-  },
-};
+const InputItem = () => {
+  console.log('aaaa')
+  const [inputValue, setInputValue] = useState('');
 
-const names = [
-  '5年',
-  '10年',
-  '15年',
-  '20年',
-  '25年',
-  '30年',
-  'Miriam Wagner',
-  'Bradley Wilkerson',
-  'Virginia Andrews',
-  'Kelly Snyder',
-];
-
-function getStyles(name, selectedName, theme) {
-  return {
-    fontWeight:
-      name === selectedName
-        ? theme.typography.fontWeightMedium
-        : theme.typography.fontWeightRegular,
+  const InputChange = (e) => {
+    setInputValue(e.target.value); 
   };
-}
 
-export default function SingleSelectChip() {
-  const theme = useTheme();
-  const [personName, setPersonName] = React.useState('');
+  const [value, setValue] = useContext(InfomationContext);
 
-  const handleChange = (event) => {
-    setPersonName(event.target.value);
-  };
 
   return (
-    <div className="center-container">
-      <FormControl sx={{ m: 1, width: 200 }}>
-        <InputLabel id="demo-single-chip-label"  style={{ color: 'blue' }}>築年数</InputLabel>
-        <Select
-          labelId="demo-single-chip-label"
-          id="demo-single-chip"
-          value={personName}
-          onChange={handleChange}
-          input={<OutlinedInput id="select-single-chip" label="Chip" />}
-          MenuProps={MenuProps}
-        >
-          {names.map((name) => (
-            <MenuItem
-              key={name}
-              value={name}
-              style={getStyles(name, personName, theme)}
-            >
-              {name}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+    <div>
+      <input
+        type="text"
+        id="input-field"
+        value={inputValue}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginLeft: '20px',
+          display: 'block',
+        }}
+      />
     </div>
   );
-}
+};
+
+export default InputItem;

@@ -1,6 +1,6 @@
 import React from 'react';
 import "../style/information.css"
-import Input from './Input';
+import Input from './Input_library';
 
 const Information = () => {
   return (
