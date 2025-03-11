@@ -11,12 +11,18 @@ const InputItem = () => {
 
   const [value, setValue] = useContext(InfomationContext);
 
-
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        marginTop: '100px', // 上からの余白
+      }}
+    >
       <input
         type="text"
-        id="input-field"
+        id="input-field-1"
         value={inputValue}
         onChange={InputChange}
         style={{
@@ -26,8 +32,71 @@ const InputItem = () => {
           padding: '10px',
           borderRadius: '10px',
           border: '1px solid #ccc',
-          marginLeft: '20px',
-          display: 'block',
+          marginBottom: '20px', // 下の余白
+        }}
+      />
+
+      <input
+        type="text"
+        id="input-field-2"
+        value={inputValue}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
+        }}
+      />
+
+<input
+        type="text"
+        id="input-field-2"
+        value={inputValue}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
+        }}
+      />
+
+<input
+        type="text"
+        id="input-field-2"
+        value={inputValue}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
+        }}
+      />
+
+<input
+        type="text"
+        id="input-field-2"
+        value={inputValue}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
         }}
       />
     </div>
@@ -35,3 +104,4 @@ const InputItem = () => {
 };
 
 export default InputItem;
+
