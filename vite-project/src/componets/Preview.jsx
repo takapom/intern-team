@@ -2,10 +2,6 @@ import { useContext, useState } from "react";
 import "../style/Preview.css";
 
 export default function Preview() {
-    // const { bukkenmei, yachin, gaikan, naikan, shosai } = useContext(PreviewContext);
-    // const [bukkenmei, setBukkenmei] = useState("");
-    // みたいな...
-    // 情報がない場合はプレースホルダーを表示しておく
     return (
         <div className="preview-main">
             <div className="preview-header">
@@ -35,7 +31,8 @@ export default function Preview() {
                                 <h2>アクセス</h2>
                             </div>
                             <div className="preview-joken_placeholder">
-                                <h2>条件</h2>
+                                <h2>契約条件</h2>
+                                <h2>必須条件</h2>
                             </div>
                         </div>
                     </div>
