@@ -1,5 +1,5 @@
-import Preview from "./componets/Preview"
 import "./App.css"
+import Preview from "./components/Preview"
 import Information from "./components/information"
 
 function App() {
