@@ -20,7 +20,7 @@ function App() {
     <div className='information'>
       <Information />
       </div>
-    <div className='preview'>   
+    <div className='preview'>
       <InfomationContext.Provider value={[value, setValue]}>
     </InfomationContext.Provider>
     <Preview />

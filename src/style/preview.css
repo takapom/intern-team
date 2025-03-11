@@ -17,6 +17,7 @@ h2{
 }
 .preview-bukkenmei{
     align-content: center;
+    text-align: center;
     border-bottom: 1px solid #000;
     border-right: 1px solid #000;
     width: 18em;
@@ -24,6 +25,7 @@ h2{
 }
 .preview-yachin{
     align-content: center;
+    text-align: center;
     border-bottom: 1px solid #000;
     border-left: 1px solid #000;
     width: 12em;
@@ -43,6 +45,7 @@ h2{
     width: 10em;
     border: 1px solid #000;
     align-content: center;
+    text-align: center;
     margin-bottom: 0.5em;
 }
 .preview-naikan{
@@ -50,6 +53,7 @@ h2{
     width: 10em;
     border: 1px solid #000;
     align-content: center;
+    text-align: center;
 }
 .preview-shosai{
     width: 24em;
@@ -63,13 +67,16 @@ h2{
     height: 12em;
     border: 1px solid #000;
     align-content: center;
+    text-align: center;
 }
 .preview-otherinfo{
     align-content: center;
+    text-align: center;
     margin-left: 0.5em;
 }
 .preview-access_placeholder{
     align-content: center;
+    text-align: center;
     margin-bottom: 0.5em;
     border: 1px solid #000;
     height: 3.25em;
@@ -77,12 +84,14 @@ h2{
 }
 .preview-joken_placeholder{
     align-content: center;
+    text-align: center;
     border: 1px solid #000;
     height: 8.125em;
     width: 12.75em;
 }
 .preview-bukken_info_placeholder{
     align-content: center;
+    text-align: center;
     margin-top: 0.5em;
     border: 1px solid #000;
     height: 3.25em;
