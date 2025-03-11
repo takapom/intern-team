@@ -3,8 +3,8 @@ import Information from "./components/information"
 import Preview from "./components/preview"
 import './App.css';
 import { createContext, useState } from "react";
-import html2canvas from 'html2canvas'
-import * as jsPDF from 'jspdf'
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 export const InfomationContext = createContext([
     { name : "" , price : 0 }, () => {}
