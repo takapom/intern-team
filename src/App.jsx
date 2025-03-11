@@ -1,9 +1,12 @@
+
 import InputItem from './componets/Input.jsx'
+import Information from "./components/information"
 import { createContext, useState } from "react";
 
 export const InfomationContext = createContext([
     { name : "" , price : 0 }, () => {}
 ]);
+
 
 function App() {
   const [value, setValue] = useState({
@@ -13,9 +16,13 @@ function App() {
 
   return (
     <>
+
+    <Information />
     <InfomationContext.Provider value={[value, setValue]}>
       <InputItem />
     </InfomationContext.Provider>
+
+    
     </>
   );
 }
