@@ -74,7 +74,7 @@ const InputItem = () => {
         物件名
       </label>
       <input
-        placeholder='例'
+        placeholder='〇〇マンション'
         type="text"
         id="name"
         value={inputValue.name}
@@ -93,10 +93,10 @@ const InputItem = () => {
 
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
       <label htmlFor="input-field-3" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
-        家賃
+        家賃(円)
       </label>
       <input
-      placeholder='例'
+      placeholder='50000'
         type="text"
         id="rent"
         value={inputValue.rent}
@@ -115,10 +115,10 @@ const InputItem = () => {
 
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
       <label htmlFor="input-field-4" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
-        面積
+        面積(m²)
       </label>
       <input
-        placeholder='例'
+        placeholder='99.99'
         type="text"
         id="area"
         value={inputValue.area}
@@ -141,7 +141,7 @@ const InputItem = () => {
         所在地
       </label>
       <input
-        placeholder='例'
+        placeholder='〇〇県〇〇市〇〇町9-99-9'
         type="text"
         id="address"
         value={inputValue.address}
@@ -164,7 +164,7 @@ const InputItem = () => {
         最寄駅
       </label>
       <input
-        placeholder='例'
+        placeholder='JR〇〇線〇〇駅 徒歩5分'
         type="text"
         id="station"
         value={inputValue.station}
@@ -186,7 +186,7 @@ const InputItem = () => {
         公開日
       </label>
       <input
-        placeholder='例'
+        placeholder='YYYY/MM/DD'
         type="text"
         id="published"
         value={inputValue.published}
