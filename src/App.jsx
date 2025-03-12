@@ -25,7 +25,6 @@ function App() {
         <Information />
       </div>
       <div className='preview'>
-        {/* <InfomationContext.Provider value={[value, setValue]}> */}
         <Title />
         <Preview />
         <Printpdf />
