@@ -9,7 +9,10 @@ const Information = () => {
         <div className='header-text'>
             <h2 className='text'>情報入力欄</h2>
         </div>
-        <div className='input-form'>
+        <div
+          className='input-form'
+          style={{ maxHeight: "45em", overflowY: "scroll" }}
+        >
           <Input />
         </div>
     </div>
