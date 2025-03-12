@@ -20,8 +20,14 @@ function App() {
     if (target === null) return;
     html2canvas(target, { scale: 2.5 }).then((canvas) => {
       const imgData = canvas.toDataURL('image/svg', 1.0);
-      let pdf = new jsPDF();
-      pdf.addImage(imgData, 'SVG', 5, 10, canvas.width / 18, canvas.height / 18);
+      let pdf = new jsPDF('l', 'mm', 'a4');
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      const imgWidth = canvas.width / 10;
+      const imgHeight = canvas.height / 10;
+      const x = (pdfWidth - imgWidth) / 2;
+      const y = (pdfHeight - imgHeight) / 2;
+      pdf.addImage(imgData, 'SVG', x, y, imgWidth, imgHeight);
       pdf.save(`preview.pdf`);
     });
   };
