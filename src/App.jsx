@@ -1,19 +1,19 @@
 import Information from "./components/information"
 import Preview from "./components/preview"
-import Title from './components/Title';
+import Title from './components/title';
 import Printpdf from './components/PrintPDF'
 import './App.css';
 import { createContext, useState } from "react";
 
 export const InfomationContext = createContext([
-    { name : "" , rent : 0 , area: "", address: "", station: "", published: "" , image: null}, () => {}
+    { name : "" , rent : 0 , area: 0, address: "", station: "", published: "" , image: null}, () => {}
 ]);
 
 function App() {
   const [value, setValue] = useState({
     name : "",
     rent : 0,
-    area: "",
+    area: 0,
     address: "", 
     station: "", 
     published: "",
@@ -28,6 +28,7 @@ function App() {
         <Information />
       </div>
       <div className='preview'>
+        <Title />
         <Preview />
         <Printpdf />
       </div>

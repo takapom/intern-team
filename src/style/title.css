@@ -1,12 +1,13 @@
-.preview-header{
-    width: 100%;
+.title-header{
+    width: 69.5em;
     padding: 5px;
     float: left;
     background-color: rgb(105, 97, 164);
     height: 10vh;
     text-align: center;
+    margin-left: 2em;
   }
   
-.preview-text{
+.title-text{
     font-size: 40px;
 }

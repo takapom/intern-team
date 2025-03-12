@@ -11,7 +11,6 @@ const Information = () => {
         </div>
         <div className='input-form'>
           <Input />
-          <Button />
         </div>
     </div>
   )
