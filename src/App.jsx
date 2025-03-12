@@ -1,6 +1,6 @@
 import Information from "./components/information"
 import Preview from "./components/preview"
-import Title from './components/Title';
+import Title from './components/title';
 import Printpdf from './components/PrintPDF'
 import './App.css';
 import { createContext, useState } from "react";
@@ -25,6 +25,8 @@ function App() {
         <Information />
       </div>
       <div className='preview'>
+        {/* <InfomationContext.Provider value={[value, setValue]}> */}
+        <Title />
         <Preview />
         <Printpdf />
       </div>

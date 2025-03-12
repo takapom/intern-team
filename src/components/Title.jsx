@@ -3,8 +3,8 @@ import "../style/title.css";
 
 const Title = () => {
     return (
-        <div className='preview-header'>
-            <h2 className='preview-text'>プレビュー</h2>
+        <div className='title-header'>
+            <h2 className='title-text'>プレビュー</h2>
         </div>
     );
 };
