@@ -6,7 +6,7 @@ import './App.css';
 import { createContext, useState } from "react";
 
 export const InfomationContext = createContext([
-    { name : "" , rent : 0 , area: 0, address: "", station: "", published: "" }, () => {}
+    { name : "" , rent : 0 , area: 0, address: "", station: "", published: "" , image: null}, () => {}
 ]);
 
 function App() {
@@ -14,9 +14,12 @@ function App() {
     name : "",
     rent : 0,
     area: 0,
-    address: "",
-    station: "",
-    published: ""
+    address: "", 
+    station: "", 
+    published: "",
+    exterior: null,
+    interview: null,
+    floor: null
   });
   return (
     <InfomationContext.Provider value={[value, setValue]}>
