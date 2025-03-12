@@ -1,10 +1,11 @@
 import React, { createContext, useContext, useState } from 'react';
 import { InfomationContext } from '../App.jsx';
 import Preview from './preview.jsx';
-// import { create } from '@mui/material/styles/createTransitions.js';
+import { FilledInput } from '@mui/material';
+import { useRef } from 'react';
+
 
 const InputItem = () => {
-  console.log('aaaa')
   const [inputValue, setInputValue] = useState({
     name: '',
     rent: '',
@@ -15,6 +16,21 @@ const InputItem = () => {
   });
 
   const [value, setValue] = useContext(InfomationContext);
+  const fileInputRef = useRef(null);
+  const fileInputRef2 = useRef(null);
+  const fileInputRef3= useRef(null);
+  const handleImageButtonClick = () =>{
+    fileInputRef.current.click();
+  }
+
+  const handleImageButtonClick2 = () =>{
+    fileInputRef2.current.click();
+  }
+
+  const handleImageButtonClick3 = () =>{
+    fileInputRef3.current.click();
+  }
+
 
   const InputChange = (e) => {
     const { id, value: inputVal } = e.target;
@@ -59,6 +75,39 @@ const InputItem = () => {
     }
   };
 
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setValue((prev) => ({...prev, image: file}));
+    }
+  };
+
+  const handleFileChange2 = (e) => {
+    const file2 = e.target.files[0];
+    if (file2) {
+      setValue((prev) => ({...prev, image: file2}));
+    }
+  };
+
+  const handleFileChange3 = (e) => {
+    const file3 = e.target.files[0];
+    if (file3) {
+      setValue((prev) => ({...prev, image: file3}));
+    }
+  };
+  
+  //画像のアップロードボタンのクリックでファイルを開く(内観と外観と間取り)
+  const handleImage = () => {
+    fileInputRef.current.click();
+  }
+
+  const handleImage2 = () => {
+    fileInputRef2.current.click();
+  }
+
+  const handleImage3 = () => {
+    fileInputRef3.current.click();
+  }
 
 
   return (
@@ -205,7 +254,55 @@ const InputItem = () => {
         }}
       />
     </div>
+
+
+   {/* 画像をアップロード処理する */}
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <label htmlFor="input-field-6"
+       style={{ marginBottom: '5px', fontSize: '`3px', fontWeight: "bold", textAlign: 'center' }}>
+        外観をアップロード</label>
+      <button onClick={handleImageButtonClick}>画像を選択</button>
+      <input 
+      type="file"
+      accept='image/*'
+      ref={fileInputRef}
+      onChange={handleFileChange}
+      style={{ display: 'none'}}
+      />
+    </div> 
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <label htmlFor="input-field-6"
+       style={{ marginBottom: '5px', fontSize: '`3px', fontWeight: "bold", textAlign: 'center' }}>
+        内観をアップロード</label>
+      <button onClick={handleImageButtonClick2}>画像を選択</button>
+      <input 
+      type="file"
+      accept='image/*'
+      ref={fileInputRef2}
+      onChange={handleFileChange2}
+      style={{ display: 'none'}}
+      />
+    </div> 
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <label htmlFor="input-field-6"
+       style={{ marginBottom: '5px', fontSize: '`3px', fontWeight: "bold", textAlign: 'center' }}>
+      間取りをアップロード</label>
+      <button onClick={handleImageButtonClick3}>画像を選択</button>
+      <input 
+      type="file"
+      accept='image/*'
+      ref={fileInputRef3}
+      onChange={handleFileChange3}
+      style={{ display: 'none'}}
+      />
+    </div> 
     </div>
+
+    
+
+  
   );
 };
 
