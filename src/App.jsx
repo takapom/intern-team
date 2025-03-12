@@ -1,5 +1,6 @@
 import Information from "./components/information"
 import Preview from "./components/preview"
+import Title from './components/Title';
 import Printpdf from './components/PrintPDF'
 import './App.css';
 import { createContext, useState } from "react";
