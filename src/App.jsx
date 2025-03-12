@@ -30,7 +30,9 @@ function App() {
       <div className='preview'>
         <Title />
         <Preview />
-        <Printpdf />
+        <div className='buttons'>
+          <Printpdf />
+        </div>
       </div>
     </div>
   </InfomationContext.Provider>
