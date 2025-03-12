@@ -1,12 +1,12 @@
-import { useContext, useState } from "react";
 import "../style/Preview.css";
+import { useContext, useState } from "react";
 import { InfomationContext } from "../App";
 
 export default function Preview() {
     const [value, setValue] = useContext(InfomationContext);
 
     return (
-        <div className="preview-main">
+        <div className="preview-main" id="pdf">
             <div className="preview-header">
                 <div className="preview-bukkenmei">
                     {value.name === "" ? <h2>物件名</h2> : <h2>{value.name}</h2>}

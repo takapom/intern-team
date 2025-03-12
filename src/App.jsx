@@ -1,5 +1,6 @@
 import Information from "./components/information"
 import Preview from "./components/preview"
+import Printpdf from './components/PrintPDF'
 import './App.css';
 import { createContext, useState } from "react";
 
@@ -16,7 +17,6 @@ function App() {
     station: "", 
     published: ""
   });
-
   return (
     // <div className='information-preview'>
     // <div className='preview'>
@@ -29,10 +29,13 @@ function App() {
     <InfomationContext.Provider value={[value, setValue]}>
     <div className='information-preview'>
       <div className='information'>
-          <Information />
+        <Information />
       </div>
       <div className='preview'>
+        <InfomationContext.Provider value={[value, setValue]}>
         <Preview />
+        <Printpdf />
+        </InfomationContext.Provider>
       </div>
     </div>
   </InfomationContext.Provider>

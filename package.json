@@ -10,15 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "atoms": "^0.2.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@eslint/js": "^9.21.0",
     "@mui/material": "^6.4.7",
     "@react-pdf/renderer": "^4.3.0",
-    "@eslint/js": "^9.21.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react-swc": "^3.8.0",
