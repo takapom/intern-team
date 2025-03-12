@@ -1,7 +1,6 @@
 import React from 'react';
 import "../style/information.css"
 import Input from './Input.jsx';
-import Button from './Button.jsx';
 
 const Information = () => {
   return (

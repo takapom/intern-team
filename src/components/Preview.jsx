@@ -2,7 +2,6 @@ import "../style/Preview.css";
 import { useContext, useState } from "react";
 import { InfomationContext } from "../App";
 import { formatNumber } from "../utils/FormatNumber";
-import Button from "./Button";
 
 export default function Preview() {
     const [value, setValue] = useContext(InfomationContext);
