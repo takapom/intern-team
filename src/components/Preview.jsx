@@ -42,7 +42,6 @@ export default function Preview() {
                     <div className="preview-bukken_info_placeholder">
                         <h2>物件情報</h2>
                     </div>
-                    
                 </div>
             </div>
         </div>

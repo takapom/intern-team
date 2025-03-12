@@ -14,8 +14,8 @@ function App() {
     name : "",
     rent : 0,
     area: "",
-    address: "", 
-    station: "", 
+    address: "",
+    station: "",
     published: ""
   });
   return (
