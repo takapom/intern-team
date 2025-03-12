@@ -77,21 +77,21 @@ const InputItem = () => {
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setValue((prev) => ({...prev, image: file}));
+      setValue((prev) => ({...prev, exterior: file}));
     }
   };
 
   const handleFileChange2 = (e) => {
     const file2 = e.target.files[0];
     if (file2) {
-      setValue((prev) => ({...prev, image: file2}));
+      setValue((prev) => ({...prev, interview: file2}));
     }
   };
 
   const handleFileChange3 = (e) => {
     const file3 = e.target.files[0];
     if (file3) {
-      setValue((prev) => ({...prev, image: file3}));
+      setValue((prev) => ({...prev, floor: file3}));
     }
   };
   
