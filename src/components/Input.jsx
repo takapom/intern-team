@@ -1,10 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 import { InfomationContext } from '../App.jsx';
-import Preview from './preview.jsx';
-// import { create } from '@mui/material/styles/createTransitions.js';
 
 const InputItem = () => {
-  console.log('aaaa')
   const [inputValue, setInputValue] = useState({
     name: '',
     rent: '',
@@ -30,7 +27,7 @@ const InputItem = () => {
     } else if (id === 'rent') {
       setValue((prevValue) => ({
         ...prevValue,
-        price: Number(inputVal) || 0,
+        rent: Number(inputVal) || 0,
       }));
     }
     else if (id === 'area') {
@@ -42,19 +39,19 @@ const InputItem = () => {
     else if (id === 'address') {
       setValue((prevValue) => ({
         ...prevValue,
-        address: Number(inputVal) || 0,
+        address: inputVal,
       }));
     }
     else if (id === 'station') {
       setValue((prevValue) => ({
         ...prevValue,
-        station: Number(inputVal) || 0,
+        station: inputVal,
       }));
     }
     else if (id === 'published') {
       setValue((prevValue) => ({
         ...prevValue,
-        published: Number(inputVal) || 0,
+        published: inputVal,
       }));
     }
   };
