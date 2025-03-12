@@ -33,7 +33,11 @@ function App() {
       <div className='preview'>
         <InfomationContext.Provider value={[value, setValue]}>
         <Preview />
-        <button type = 'button' onClick={printDocument}>Download PDF</button>
+        <div className='printbutton'>
+        <button type = 'button' onClick={printDocument}>
+          PDFダウンロード
+        </button>
+        </div>
         </InfomationContext.Provider>
       </div>
     </div>
