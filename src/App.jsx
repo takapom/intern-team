@@ -18,24 +18,16 @@ function App() {
     published: ""
   });
   return (
-    // <div className='information-preview'>
-    // <div className='preview'>
-    //   <InfomationContext.Provider value={[value, setValue]}>
-    //   <Information />
-    //   <Preview />
-    // </InfomationContext.Provider>
-    // </div>
-    // </div>
     <InfomationContext.Provider value={[value, setValue]}>
     <div className='information-preview'>
       <div className='information'>
         <Information />
       </div>
       <div className='preview'>
-        <InfomationContext.Provider value={[value, setValue]}>
+        {/* <InfomationContext.Provider value={[value, setValue]}> */}
         <Preview />
         <Printpdf />
-        </InfomationContext.Provider>
+        {/* </InfomationContext.Provider> */}
       </div>
     </div>
   </InfomationContext.Provider>
