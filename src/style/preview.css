@@ -23,6 +23,11 @@ h2{
     width: 40em;
     margin-right: 3em;
 }
+.preview-bukkenmei p{
+    font-size: 3.25em;
+    color: #000;
+    margin: auto;
+}
 .preview-yachin{
     align-content: center;
     text-align: center;
@@ -30,6 +35,11 @@ h2{
     border-left: 1px solid #000;
     width: 25em;
     margin-left: 3em;
+}
+.preview-yachin p{
+    font-size: 2.3em;
+    color: #000;
+    margin: auto;
 }
 .preview-body{
     display: flex;
@@ -84,6 +94,23 @@ h2{
     height: 9em;
     width: 23em;
 }
+.preview-access{
+    text-align: left;
+    margin-bottom: 1em;
+    border: 1px solid #000;
+    height: 9em;
+    width: 23em;
+}
+.preview-access h3{
+    margin: 0em;
+    margin-left: 0.5em;
+    font-size: 1.5em;
+}
+.preview-access p{
+    margin: 0em;
+    margin-left: 1em;
+    font-size: 1.25em;
+}
 .preview-joken_placeholder{
     align-content: center;
     text-align: center;
@@ -97,4 +124,16 @@ h2{
     margin-top: 1em;
     border: 1px solid #000;
     height: 7em;
+}
+.preview-bukken_info{
+    text-align: left;
+    margin-top: 1em;
+    border: 1px solid #000;
+    height: 7em;
+}
+.preview-bukken_info p{
+    margin-bottom: 0em;
+    margin-left: 1em;
+    margin-top: 0.25em;
+    font-size: 1.25em;
 }

@@ -6,14 +6,14 @@ import './App.css';
 import { createContext, useState } from "react";
 
 export const InfomationContext = createContext([
-    { name : "" , rent : 0 , area: "", address: "", station: "", published: "" }, () => {}
+    { name : "" , rent : 0 , area: 0, address: "", station: "", published: "" }, () => {}
 ]);
 
 function App() {
   const [value, setValue] = useState({
     name : "",
     rent : 0,
-    area: "",
+    area: 0,
     address: "",
     station: "",
     published: ""
@@ -29,7 +29,6 @@ function App() {
         <Title />
         <Preview />
         <Printpdf />
-        {/* </InfomationContext.Provider> */}
       </div>
     </div>
   </InfomationContext.Provider>
