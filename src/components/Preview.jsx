@@ -2,27 +2,22 @@ import "../style/Preview.css";
 import { useContext, useState } from "react";
 import { InfomationContext } from "../App";
 import { formatNumber } from "../utils/FormatNumber";
+import { Judgeimagesize } from "../utils/Judgeimagesize";
 
 export default function Preview() {
     const [value, setValue] = useContext(InfomationContext);
-
-    //外観、内観、間取り図の挿入処理
-    let imageUrl = null;
+    let imageUrl1 = null;
     if (value.exterior){
-        imageUrl = URL.createObjectURL(value.exterior);
+        imageUrl1 = URL.createObjectURL(value.exterior);
     }
-
     let imageUrl2 = null;
     if (value.interview){
         imageUrl2 = URL.createObjectURL(value.interview);
     }
-
     let imageUrl3 = null;
     if (value.floor){
         imageUrl3 = URL.createObjectURL(value.floor);
     }
- 
-    
     return (
         <div className="preview-main" id="pdf">
             <div className="preview-header">
@@ -39,24 +34,36 @@ export default function Preview() {
             <div className="preview-body">
                 <div className="preview-images">
                     <div className="preview-gaikan">
-                        {!imageUrl && <h2>外観</h2>}
-                        {imageUrl && (
-                        <img src={imageUrl} alt="アップロード画像" width="300" />
-                            )}
+                        {!imageUrl1 && <h2>外観</h2>}
+                        {imageUrl1 && (
+                            Judgeimagesize(imageUrl1) ? (
+                                <img src={imageUrl1} style={{ height: "14em" }} />
+                            ) : (
+                                <img src={imageUrl1} style={{ width: "21em" }} />
+                            )
+                        )}
                     </div>
                     <div className="preview-naikan">
-                    {!imageUrl2 && <h2>内観</h2>}
+                        {!imageUrl2 && <h2>内観</h2>}
                         {imageUrl2 && (
-                        <img src={imageUrl2} alt="アップロード画像" width="300" />
-                            )}
+                            Judgeimagesize(imageUrl2) ? (
+                                <img src={imageUrl2} style={{ height: "14em" }} />
+                            ) : (
+                                <img src={imageUrl2} style={{ width: "21em" }} />
+                            )
+                        )}
                     </div>
                 </div>
                 <div className="preview-shosai">
                     <div className="preview-info">
                         <div className="preview-madori">
-                        {!imageUrl3 && <h2>間取り図</h2>}
+                            {!imageUrl3 && <h2>間取り</h2>}
                             {imageUrl3 && (
-                        <img src={imageUrl3} alt="アップロード画像" width="300" />
+                                Judgeimagesize(imageUrl3) ? (
+                                    <img src={imageUrl3} style={{ height: "23em" }} />
+                                ) : (
+                                    <img src={imageUrl3} style={{ width: "18em" }} />
+                                )
                             )}
                         </div>
                         <div className="preview-otherinfo">

@@ -344,11 +344,7 @@ const InputItem = () => {
       onChange={handleFileChange3}
       style={{ display: 'none'}}
       />
-    </div> 
     </div>
-    
-
-  
   );
 };
 
