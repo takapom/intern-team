@@ -84,8 +84,13 @@ export default function Preview() {
                                 </div>
                             }
                             <div className="preview-joken_placeholder">
-                                <h2>契約条件</h2>
-                                <h2>必須条件</h2>
+                                <div className="preview-joken_placeholder">
+                                <p>敷金/礼金: <b>{formatNumber(value.deposit)}円</b></p>
+                                <p>更新料: <b>{formatNumber(value.new)}円</b></p>
+                                <p>契約期間:  {value.contract}</p>
+                                <p>駐車場:  {value.park}</p>
+                                <p>保険加入:  {value.insurance}</p>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -114,9 +114,17 @@ h2{
 .preview-joken_placeholder{
     align-content: center;
     text-align: center;
-    border: 1px solid #000;
+    border: 0.5px solid #000;
     height: 14.9em;
     width: 23em;
+    font-weight: bold;
+}
+
+.preview-joken_placeholder p {
+    text-align: left;
+    margin-left: 1.5em;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 .preview-bukken_info_placeholder{
     align-content: center;

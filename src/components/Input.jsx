@@ -73,7 +73,37 @@ const InputItem = () => {
         published: inputVal,
       }));
     }
-  };
+    else if (id === 'deposit') {
+      setValue((prevValue) => ({
+        ...prevValue,
+        deposit: Number(inputVal) || 0,
+      }));
+    }
+    else if (id === 'new') {
+      setValue((prevValue) => ({
+        ...prevValue,
+        new: Number(inputVal) || 0,
+    }));
+  }
+  else if (id === 'contract') {
+    setValue((prevValue) => ({
+      ...prevValue,
+      contract: inputVal,
+    }));
+  }
+  else if (id === 'park') {
+    setValue((prevValue) => ({
+      ...prevValue,
+      park: inputVal,
+    }));
+  }
+  else if (id === 'insurance') {
+    setValue((prevValue) => ({
+      ...prevValue,
+      insurance: inputVal,
+    }));
+  } 
+};
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -255,11 +285,123 @@ const InputItem = () => {
         }}
       />
     </div>
+
+
+    {/* 以下は契約条件 */}
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
+        敷金/礼金
+      </label>
+      <input
+        placeholder='40000円'
+        type="text"
+        id="deposit"
+        value={inputValue.deposit}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
+        }}
+      />
+    </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
+        更新料
+      </label>
+      <input
+        placeholder='60000円'
+        type="text"
+        id="new"
+        value={inputValue.new}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
+        }}
+      />
+    </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
+        契約期間
+      </label>
+      <input
+        placeholder='2年'
+        type="text"
+        id="contract"
+        value={inputValue.contract}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
+        }}
+      />
+    </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
+        駐車場
+      </label>
+      <input
+        placeholder='ありorなし'
+        type="text"
+        id="park"
+        value={inputValue.park}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
+        }}
+      />
+    </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
+        保険加入
+      </label>
+      <input
+        placeholder='火災保険'
+        type="text"
+        id="insurance"
+        value={inputValue.insurance}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
+        }}
+      />
+    </div>
     </div>
 
 
    {/* 画像をアップロード処理する  */}
-     <div style=
+    <div style=
     {{display: 'flex',
       flexDirection: 'column',
       alignItems: 'flex-start',
@@ -345,8 +487,8 @@ const InputItem = () => {
       style={{ display: 'none'}}
       />
     </div>
+    </div>
   );
 };
 
 export default InputItem;
-
