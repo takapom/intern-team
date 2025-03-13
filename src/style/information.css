@@ -12,6 +12,15 @@
   text-align: center;
 }
 
+.text{
+  text-align: center;
+  padding: 3%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+
 .information-text{
   font-size: 40px;
 }
