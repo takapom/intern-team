@@ -1,4 +1,4 @@
-export function FormatNumber (num){
+export function formatNumber (num){
     const tenthousand = 10000;
     const tenmillion = 10000000;
     // 賃料が1千万以上の場合は万単位で表示

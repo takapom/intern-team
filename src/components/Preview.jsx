@@ -1,7 +1,7 @@
 import "../style/Preview.css";
 import { useContext } from "react";
 import { InfomationContext } from "../App";
-import { FormatNumber } from "../utils/FormatNumber";
+import { formatNumber } from "../utils/formatnumber";
 
 export default function Preview() {
     const [value] = useContext(InfomationContext);
@@ -24,7 +24,7 @@ export default function Preview() {
                     {!value.name ? <h2>物件名</h2> : <p>{value.name}</p>}
                 </div>
                 <div className="preview-yachin">
-                    {!value.rent ? <h2>家賃</h2> : <p>賃料: <b>{FormatNumber(value.rent)}円</b></p>}
+                    {!value.rent ? <h2>家賃</h2> : <p>賃料: <b>{formatNumber(value.rent)}円</b></p>}
                 </div>
             </div>
             <div className="preview-body">
