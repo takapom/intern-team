@@ -10,8 +10,7 @@ const PopUp = () => {
 
   return (
     <div>
-      <button onClick={togglePopUp}>ポップアップを開く</button>
-
+      <button onClick={togglePopUp} className="usage-btn">使い方</button>
       {isPopUpVisible && (
         <div className="overlay">
           <div className="PopUp">

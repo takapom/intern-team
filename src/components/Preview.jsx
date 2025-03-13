@@ -1,10 +1,10 @@
 import "../style/Preview.css";
 import { useContext } from "react";
-import { InfomationContext } from "../App";
+import { InformationContext } from "../App";
 import { formatNumber } from "../utils/formatnumber";
 
 export default function Preview() {
-    const [value] = useContext(InfomationContext);
+    const [value] = useContext(InformationContext);
     let NaikanImage = null;
     if (value.exterior){
         NaikanImage = URL.createObjectURL(value.exterior);
