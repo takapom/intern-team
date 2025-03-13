@@ -289,19 +289,15 @@ const InputItem = () => {
        style={{ marginBottom: '5px', fontSize: '`3px', fontWeight: "bold", textAlign: 'center' }}>
       間取りをアップロード</label>
       <button onClick={handleImageButtonClick3}>画像を選択</button>
-      <input 
+      <input
       type="file"
       accept='image/*'
       ref={fileInputRef3}
       onChange={handleFileChange3}
       style={{ display: 'none'}}
       />
-    </div> 
     </div>
-
-    
-
-  
+    </div>
   );
 };
 
