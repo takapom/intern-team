@@ -2,13 +2,13 @@ import * as React from 'react'
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 
-export default function Printpdf() {
+export default function PrintPdf() {
     const printDocument = () => {
         const target = document.getElementById('pdf');
         if (target === null) return;
         html2canvas(target, { scale: 2.5 }).then((canvas) => {
         const imgData = canvas.toDataURL('image/svg', 1.0);
-        let pdf = new jsPDF('l', 'mm', 'a4');
+        const pdf = new jsPDF('l', 'mm', 'a4');
         const pdfWidth = pdf.internal.pageSize.getWidth();
         const pdfHeight = pdf.internal.pageSize.getHeight();
         const imgWidth = canvas.width / 10;
