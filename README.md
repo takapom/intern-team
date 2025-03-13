@@ -1,12 +1,23 @@
-# React + Vite
+# マイソク生成アプリケーション
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 概要
 
-Currently, two official plugins are available:
+「マイソク」とは、不動産についての情報が一枚の図面にまとめられたもののことです。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+このアプリケーションは、そのマイソクをデータを入力するだけで自動的に作成し、PDF形式でダウンロードすることを可能にしています。
 
-## Expanding the ESLint configuration
+## 使い方
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. 画面左側のフォームに必要な情報を入力します。
+2. 入力された情報を元に、画面右側のプレビューが更新されます。
+3. プレビューが正しく表示されていることを確認したら、「PDFダウンロード」ボタンをクリックします。そうすると、作成したマイソクがPDF形式でダウンロードされます。
+
+また、この使い方は「使い方」ボタンをクリックすることでいつでも確認することができます。
+
+## 使用技術
+
+- [React](https://react.dev/)
+- [Vite](https://vite.dev/)
+- HTML
+- CSS
+- JavaScript
