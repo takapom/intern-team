@@ -47,7 +47,7 @@ export default function Preview() {
                     <div className="preview-info">
                         <div className="preview-madori">
                             {!imageUrl3 && <h2>間取り</h2>}
-                            {imageUrl3 && <img src={imageUrl3} style={{ height: "25em", width: "18em" }} />
+                            {imageUrl3 && <img src={imageUrl3} style={{ height: "25em", width: "19.75em" }} />
                             }
                         </div>
                         <div className="preview-otherinfo">
