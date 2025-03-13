@@ -1,6 +1,7 @@
 import * as React from 'react'
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import '../style/printpdf.css';
 
 export default function PrintPdf() {
     const printDocument = () => {
@@ -23,7 +24,7 @@ export default function PrintPdf() {
     };
     return (
     <>
-        <button type = 'button' onClick={printDocument}>
+        <button type = 'button' onClick={printDocument} className='c-btn'>
             PDFダウンロード
         </button>
     </>
