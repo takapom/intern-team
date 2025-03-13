@@ -1,5 +1,7 @@
 .information-preview{
   display: flex;
+  width: 100vw;
+  height: auto;
 }
 
 .information{
@@ -12,8 +14,4 @@
   text-align: center;
   display: flex;
   gap:2em;
-}
-
-body{
-  display: block;
 }
