@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-import { InfomationContext } from '../App.jsx';
+import { InformationContext } from '../App.jsx';
 import Preview from './preview.jsx';
 import { FilledInput } from '@mui/material';
 import { useRef } from 'react';
@@ -15,7 +15,7 @@ const InputItem = () => {
     published: '',
   });
 
-  const [value, setValue] = useContext(InfomationContext);
+  const [value, setValue] = useContext(InformationContext);
   const fileInputRef = useRef(null);
   const fileInputRef2 = useRef(null);
   const fileInputRef3= useRef(null);
