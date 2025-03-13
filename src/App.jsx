@@ -1,7 +1,8 @@
-import Information from "./components/information"
-import Preview from "./components/preview"
+import Information from "./components/Information"
+import Preview from "./components/Preview"
 import Title from './components/Title';
-import Printpdf from './components/PrintPDF'
+import PopUp from './components/Popup'
+import PrintPdf from './components/PrintPdf'
 import './App.css';
 import { createContext, useState } from "react";
 
@@ -27,17 +28,20 @@ function App() {
     floor: null
   });
   return (
-    <InfomationContext.Provider value={[value, setValue]}>
+    <InformationContext.Provider value={[value, setValue]}>
     <div className='information-preview'>
       <div className='information'>
         <Information />
       </div>
       <div className='preview'>
         <Preview />
-        <Printpdf />
+        <div className='buttons'>
+          <PopUp />
+          <PrintPdf />
+        </div>
       </div>
     </div>
-  </InfomationContext.Provider>
+  </InformationContext.Provider>
   );
 }
 

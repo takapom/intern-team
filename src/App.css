@@ -8,11 +8,12 @@
 
 .buttons{
   margin: 1em;
-  margin-left: 2em;
+  margin-left: 20em;
   text-align: center;
+  display: flex;
+  gap:2em;
 }
-.buttons button{
-  width: 10em;
-  height: 2em;
-  font-size: 1.5em;
+
+body{
+  display: block;
 }
