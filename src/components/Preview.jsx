@@ -2,7 +2,6 @@ import "../style/Preview.css";
 import { useContext, useState } from "react";
 import { InfomationContext } from "../App";
 import { formatNumber } from "../utils/FormatNumber";
-import { Judgeimagesize } from "../utils/Judgeimagesize";
 
 export default function Preview() {
     const [value, setValue] = useContext(InfomationContext);
@@ -48,9 +47,7 @@ export default function Preview() {
                     <div className="preview-info">
                         <div className="preview-madori">
                             {!imageUrl3 && <h2>間取り</h2>}
-                            {imageUrl3 && <img src={
-                                Judgeimagesize(imageUrl3) ? imageUrl3 : imageUrl3
-                            } style={{ height: "25em", width: "18em" }} />
+                            {imageUrl3 && <img src={imageUrl3} style={{ height: "25em", width: "18em" }} />
                             }
                         </div>
                         <div className="preview-otherinfo">
