@@ -35,36 +35,23 @@ export default function Preview() {
                 <div className="preview-images">
                     <div className="preview-gaikan">
                         {!imageUrl1 && <h2>外観</h2>}
-                        {imageUrl1 && (
-                            Judgeimagesize(imageUrl1) ? (
-                                <img src={imageUrl1} style={{ height: "14em" }} />
-                            ) : (
-                                <img src={imageUrl1} style={{ width: "21em" }} />
-                            )
-                        )}
+                        {imageUrl1 && <img src={imageUrl1} style={{ height: "16em", width: "23em" }} />
+                        }
                     </div>
                     <div className="preview-naikan">
                         {!imageUrl2 && <h2>内観</h2>}
-                        {imageUrl2 && (
-                            Judgeimagesize(imageUrl2) ? (
-                                <img src={imageUrl2} style={{ height: "14em" }} />
-                            ) : (
-                                <img src={imageUrl2} style={{ width: "21em" }} />
-                            )
-                        )}
+                        {imageUrl2 && <img src={imageUrl2} style={{ height: "16em", width: "23em" }} />
+                        }
                     </div>
                 </div>
                 <div className="preview-shosai">
                     <div className="preview-info">
                         <div className="preview-madori">
                             {!imageUrl3 && <h2>間取り</h2>}
-                            {imageUrl3 && (
-                                Judgeimagesize(imageUrl3) ? (
-                                    <img src={imageUrl3} style={{ height: "23em" }} />
-                                ) : (
-                                    <img src={imageUrl3} style={{ width: "18em" }} />
-                                )
-                            )}
+                            {imageUrl3 && <img src={
+                                Judgeimagesize(imageUrl3) ? imageUrl3 : imageUrl3
+                            } style={{ height: "25em", width: "18em" }} />
+                            }
                         </div>
                         <div className="preview-otherinfo">
                             {
