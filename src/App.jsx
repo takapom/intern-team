@@ -6,18 +6,23 @@ import PrintPdf from './components/PrintPdf'
 import './App.css';
 import { createContext, useState } from "react";
 
-export const InformationContext = createContext([
-    { name : "" , rent : 0 , area: 0, address: "", station: "", published: "" , image: null}, () => {}
+export const InfomationContext = createContext([
+    { name : "" , rent : 0 , area: "", address: "", station: "", published: "" , exterior: null, interview: null, floor: null}, () => {}
 ]);
 
 function App() {
   const [value, setValue] = useState({
     name : "",
     rent : 0,
-    area: 0,
-    address: "",
-    station: "",
+    area: "",
+    address: "", 
+    station: "", 
     published: "",
+    deposit:0,
+    new: 0,
+    contract: '',
+    park: '',
+    insurance:'',
     exterior: null,
     interview: null,
     floor: null
@@ -29,7 +34,6 @@ function App() {
         <Information />
       </div>
       <div className='preview'>
-        <Title />
         <Preview />
         <div className='buttons'>
           <PopUp />
