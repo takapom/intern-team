@@ -345,6 +345,7 @@ const InputItem = () => {
       style={{ display: 'none'}}
       />
     </div>
+    </div>
   );
 };
 
