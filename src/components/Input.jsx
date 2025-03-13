@@ -3,6 +3,7 @@ import { InfomationContext } from '../App.jsx';
 import Preview from './preview.jsx';
 import { FilledInput } from '@mui/material';
 import { useRef } from 'react';
+import { blue } from '@mui/material/colors';
 
 const InputItem = () => {
   const [inputValue, setInputValue] = useState({
@@ -77,21 +78,21 @@ const InputItem = () => {
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setValue((prev) => ({...prev, image: file}));
+      setValue((prev) => ({...prev, exterior: file}));
     }
   };
 
   const handleFileChange2 = (e) => {
     const file2 = e.target.files[0];
     if (file2) {
-      setValue((prev) => ({...prev, image: file2}));
+      setValue((prev) => ({...prev, interview: file2}));
     }
   };
 
   const handleFileChange3 = (e) => {
     const file3 = e.target.files[0];
     if (file3) {
-      setValue((prev) => ({...prev, image: file3}));
+      setValue((prev) => ({...prev, floor: file3}));
     }
   };
   
@@ -110,6 +111,7 @@ const InputItem = () => {
 
 
   return (
+    <div>
     <div
       style={{
         display: 'flex',
@@ -253,14 +255,34 @@ const InputItem = () => {
         }}
       />
     </div>
+    </div>
 
 
-   {/* 画像をアップロード処理する */}
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+   {/* 画像をアップロード処理する  */}
+     <div style=
+    {{display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      justifyContent: 'flex-start',
+      marginLeft: '10px',
+      marginBottom: '10px'
+      }}>
       <label htmlFor="input-field-6"
-       style={{ marginBottom: '5px', fontSize: '`3px', fontWeight: "bold", textAlign: 'center' }}>
+       style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
         外観をアップロード</label>
-      <button onClick={handleImageButtonClick}>画像を選択</button>
+      <button style={{
+            backgroundColor: '#1976d2',
+            color: 'white',
+            padding: '7px 16px',
+            border: 'none',
+            borderRadius: '6px',
+            fontSize: '13px',
+            fontWeight: 'bold',
+            marginTop: '5px',
+            width: '100px' // オプション：親幅に合わせる
+
+      }}
+      onClick={handleImageButtonClick}>画像を選択</button>
       <input 
       type="file"
       accept='image/*'
@@ -270,11 +292,24 @@ const InputItem = () => {
       />
     </div> 
 
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '10px', marginBottom: '10px' }}>
       <label htmlFor="input-field-6"
-       style={{ marginBottom: '5px', fontSize: '`3px', fontWeight: "bold", textAlign: 'center' }}>
+       style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold", textAlign: 'center' }}>
         内観をアップロード</label>
-      <button onClick={handleImageButtonClick2}>画像を選択</button>
+      <button style={{
+                    backgroundColor: '#1976d2',
+                    color: 'white',
+                    padding: '7px 16px',
+                    border: 'none',
+                    borderRadius: '6px',
+                    fontSize: '13px',
+                    fontWeight: 'bold',
+                    marginTop: '5px',
+                    width: '100px' // オプション：親幅に合わせる
+      }}
+      onClick={handleImageButtonClick2}>画像を選択</button>
       <input 
       type="file"
       accept='image/*'
@@ -284,11 +319,24 @@ const InputItem = () => {
       />
     </div> 
 
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '10px' }}>
       <label htmlFor="input-field-6"
-       style={{ marginBottom: '5px', fontSize: '`3px', fontWeight: "bold", textAlign: 'center' }}>
+       style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold", textAlign: 'center' }}>
       間取りをアップロード</label>
-      <button onClick={handleImageButtonClick3}>画像を選択</button>
+      <button 
+      style={{
+        backgroundColor: '#1976d2',
+        color: 'white',
+        padding: '7px 16px',
+        border: 'none',
+        borderRadius: '6px',
+        fontSize: '13px',
+        fontWeight: 'bold',
+        marginTop: '5px',
+        marginBottom: '20px',
+        width: '100px' // オプション：親幅に合わせる
+      }}
+      onClick={handleImageButtonClick3}>画像を選択</button>
       <input 
       type="file"
       accept='image/*'
@@ -296,12 +344,8 @@ const InputItem = () => {
       onChange={handleFileChange3}
       style={{ display: 'none'}}
       />
-    </div> 
     </div>
-
-    
-
-  
+    </div>
   );
 };
 

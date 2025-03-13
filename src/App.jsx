@@ -1,8 +1,8 @@
 import Information from "./components/information"
 import Preview from "./components/preview"
 import Title from './components/title';
-import Printpdf from './components/PrintPDF'
 import PopUp from './components/Popup'
+import PrintPdf from './components/PrintPdf'
 import './App.css';
 import { createContext, useState } from "react";
 
@@ -32,8 +32,8 @@ function App() {
         <Title />
         <Preview />
         <div className='buttons'>
-          <Printpdf />
           <PopUp />
+          <PrintPdf />
         </div>
       </div>
     </div>
