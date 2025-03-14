@@ -44,13 +44,13 @@ const InputItem = () => {
     } else if (id === 'rent') {
       setPropertyInfo((prevValue) => ({
         ...prevValue,
-        rent: Number(inputVal) || 0,
+        rent: Number(inputVal) || '',
       }));
     }
     else if (id === 'area') {
       setPropertyInfo((prevValue) => ({
         ...prevValue,
-        area: Number(inputVal) || 0,
+        area: Number(inputVal) || '',
       }));
     }
     else if (id === 'address') {
@@ -74,13 +74,13 @@ const InputItem = () => {
     else if (id === 'deposit') {
       setPropertyInfo((prevValue) => ({
         ...prevValue,
-        deposit: Number(inputVal) || 0,
+        deposit: Number(inputVal) || '',
       }));
     }
     else if (id === 'new') {
       setPropertyInfo((prevValue) => ({
         ...prevValue,
-        new: Number(inputVal) || 0,
+        new: Number(inputVal) || '',
     }));
   }
   else if (id === 'contract') {
@@ -105,14 +105,14 @@ const InputItem = () => {
   else if (id === 'construction') {
     setPropertyInfo((prevValue) => ({
       ...prevValue,
-      construction: Number(inputVal) || 0,
+      construction: Number(inputVal) || '',
   }));
 }
   //共益費
   else if (id === 'common') {
     setPropertyInfo((prevValue) => ({
       ...prevValue,
-      common: Number(inputVal) || 0,
+      common: Number(inputVal) || '',
   }));
   }
 
@@ -120,7 +120,7 @@ const InputItem = () => {
   else if (id === 'available') {
     setPropertyInfo((prevValue) => ({
       ...prevValue,
-      available: inputVal,
+      available : Number(inputVal) || '',
   }));
 }
 
@@ -128,7 +128,7 @@ const InputItem = () => {
   else if (id === 'hierarchy') {
     setPropertyInfo((prevValue) => ({
       ...prevValue,
-      hierarchy: Number(inputVal) || 0,
+      hierarchy: Number(inputVal) || '',
   }));
   }
 
