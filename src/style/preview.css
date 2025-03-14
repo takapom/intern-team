@@ -1,7 +1,7 @@
 .preview-main{
     margin-top: 10%;
     background-color: white;
-    width: 70em;
+    width: 70.5em;
     height: 40em;
     margin-left: 2em;
     border: 1px solid #000;
@@ -67,9 +67,9 @@ h2{
     text-align: center;
 }
 .preview-shosai{
-    width: 44em;
-    height: 33em;
-    margin-left: 1em;
+    width: 44.5em;
+    height: 30em;
+    margin-left: 1em;;
 }
 .preview-info{
     display: flex;
