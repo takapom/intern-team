@@ -68,6 +68,8 @@ export default function Preview() {
                                 <p>契約期間:  {value.contract}</p>
                                 <p>駐車場:  {value.park}</p>
                                 <p>保険加入:  {value.insurance}</p>
+                                <p>追加予定:  {value.insurance}</p>
+                                <p>追加予定:  {value.insurance}</p>
                                 </div>
                             </div>
                         </div>
@@ -84,10 +86,15 @@ export default function Preview() {
                         {value.published && (
                             <p>公開日: <b>{value.published}</b></p>
                         )}
+                        <div className="preview-bukken_info_left">
+                        <p>築年数: <b>{value.construction}年</b></p>
+                        </div>
                         <div className="preview-bukken_info_right">
+                            <p>これはテストテキストです</p>
                         </div>
                     </div>
                     }
+
                 </div>
             </div>
         </div>

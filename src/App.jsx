@@ -10,6 +10,13 @@ export const InformationContext = createContext([
     { name : "" , rent : 0 , area: "", address: "", station: "", published: "" , exterior: null, interview: null, floor: null}, () => {}
 ]);
 
+// 増やしたもの
+// ・共益費
+// ・入居可能日
+
+// ・階層
+// ・設備
+
 function App() {
   const [value, setValue] = useState({
     name : "",
@@ -25,7 +32,12 @@ function App() {
     insurance:'',
     exterior: null,
     interview: null,
-    floor: null
+    floor: null,
+    construction: 0,
+    common: 0,
+    available: '',
+    hierarchy: 0,
+    equipment: ''
   });
   return (
     <InformationContext.Provider value={[value, setValue]}>
