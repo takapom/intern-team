@@ -13,7 +13,7 @@ export default function Preview() {
         <div className="preview-main" id="pdf">
             <div className="preview-header">
                 <div className="preview-bukkenmei">
-                    {!propertyInfo.name ? <h2>物件名</h2> : <p>{propertyInfo.name}</p>}
+                    {!propertyInfo.name ? <h2>物件名</h2> : <p><b>{propertyInfo.name}</b></p>}
                 </div>
                 <div className="preview-yachin">
                     {!propertyInfo.rent ? <h2>家賃</h2> : <p>賃料: <b>{formatNumber(propertyInfo.rent)}円</b></p>}
@@ -60,6 +60,9 @@ export default function Preview() {
                                 </div>
                                 : <div className="preview-joken">
                                 <p>敷金/礼金: <b>{formatNumber(propertyInfo.deposit)}円</b></p>
+                                {propertyInfo.common && (
+                                    <p>共益費: <b>{formatNumber(propertyInfo.common)}円</b></p>
+                                )}
                                 {propertyInfo.new && (
                                     <p>更新料: <b>{formatNumber(propertyInfo.new)}円</b></p>
                                 )}
@@ -72,6 +75,9 @@ export default function Preview() {
                                 {propertyInfo.insurance && (
                                     <p>保険加入: <b>{propertyInfo.insurance}</b></p>
                                 )}
+                                {propertyInfo.available && (
+                                    <p>入居可能日: <b>{propertyInfo.available}</b></p>
+                                )}
                                 </div>
                             }
                         </div>
@@ -82,12 +88,21 @@ export default function Preview() {
                         </div>
                         : <div className="preview-bukken_info">
                             <div className="preview-bukken_info_left">
-                            <p>面積: <b>{propertyInfo.area} ㎡</b></p>
+                            <p>面積: <b>{propertyInfo.area}㎡</b></p>
                             {propertyInfo.published && (
                                 <p>公開日: <b>{propertyInfo.published}</b></p>
                             )}
+                            {propertyInfo.construction && (
+                                <p>築年数: <b>{formatNumber(propertyInfo.construction)}年</b></p>
+                            )}
                             </div>
                             <div className="preview-bukken_info_right">
+                            {propertyInfo.hierarchy && (
+                                <p>階層: <b>{propertyInfo.hierarchy}階</b></p>
+                            )}
+                            {propertyInfo.equipment && (
+                                <p>設備: <b>{propertyInfo.equipment}</b></p>
+                            )}
                             </div>
                         </div>
                     }

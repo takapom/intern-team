@@ -120,7 +120,7 @@ const InputItem = () => {
   else if (id === 'available') {
     setPropertyInfo((prevValue) => ({
       ...prevValue,
-      construction: Number(inputVal) || 0,
+      available: inputVal,
   }));
 }
 
@@ -128,7 +128,7 @@ const InputItem = () => {
   else if (id === 'hierarchy') {
     setPropertyInfo((prevValue) => ({
       ...prevValue,
-      construction: Number(inputVal) || 0,
+      hierarchy: Number(inputVal) || 0,
   }));
   }
 
