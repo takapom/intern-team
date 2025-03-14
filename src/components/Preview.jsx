@@ -37,13 +37,17 @@ export default function Preview() {
                             {MadoriImage && <img src={MadoriImage} style={{ height: "25em", width: "19.75em" }} />}
                         </div>
                         <div className="preview-otherinfo">
-                            {!propertyInfo.address
+                            {!propertyInfo.address && !propertyInfo.station
                                 ? <div className="preview-access_placeholder">
                                     <h2>アクセス</h2>
                                 </div>
                                 : <div className="preview-access">
-                                    <h3>所在地</h3>
-                                    <p>{propertyInfo.address}</p>
+                                    {propertyInfo.address && (
+                                        <>
+                                            <h3>所在地</h3>
+                                            <p>{propertyInfo.address}</p>
+                                        </>
+                                    )}
                                     {propertyInfo.station && (
                                         <>
                                             <h3>最寄駅</h3>
@@ -53,13 +57,15 @@ export default function Preview() {
                                 </div>
                             }
 
-                            {!propertyInfo.deposit
+                            {!propertyInfo.deposit && !propertyInfo.common && !propertyInfo.new && !propertyInfo.contract && !propertyInfo.park && !propertyInfo.insurance && !propertyInfo.available
                                 ? <div className="preview-joken_placeholder">
                                     <h2>契約条件</h2>
                                     <h2>必須条件</h2>
                                 </div>
                                 : <div className="preview-joken">
-                                <p>敷金/礼金: <b>{formatNumber(propertyInfo.deposit)}円</b></p>
+                                {propertyInfo.deposit && (
+                                    <p>敷金/礼金: <b>{formatNumber(propertyInfo.deposit)}円</b></p>
+                                )}
                                 {propertyInfo.common && (
                                     <p>共益費: <b>{formatNumber(propertyInfo.common)}円</b></p>
                                 )}
@@ -82,13 +88,15 @@ export default function Preview() {
                             }
                         </div>
                     </div>
-                    {!propertyInfo.area
+                    {!propertyInfo.area && !propertyInfo.published && !propertyInfo.construction && !propertyInfo.hierarchy && !propertyInfo.equipment
                         ? <div className="preview-bukken_info_placeholder">
                             <h2>物件情報</h2>
                         </div>
                         : <div className="preview-bukken_info">
                             <div className="preview-bukken_info_left">
-                            <p>面積: <b>{propertyInfo.area}㎡</b></p>
+                            {propertyInfo.area && (
+                                <p>面積: <b>{propertyInfo.area}㎡</b></p>
+                            )}
                             {propertyInfo.published && (
                                 <p>公開日: <b>{propertyInfo.published}</b></p>
                             )}
