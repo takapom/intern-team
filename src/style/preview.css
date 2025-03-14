@@ -132,7 +132,7 @@ h2{
     margin-bottom: 0em;
     margin-left: 1em;
     margin-top: 0.25em;
-    font-size: 1.25em;
+    font-size: 1.2em;
 }
 .preview-bukken_info_placeholder{
     align-content: center;
@@ -149,7 +149,6 @@ h2{
     height: 7em;
 }
 .preview-bukken_info_left{
-    align-content: center;
     text-align: left;
     margin-right: 0.5em;
     width: 21.5em;
