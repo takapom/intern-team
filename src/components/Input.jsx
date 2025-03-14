@@ -13,7 +13,7 @@ const InputItem = () => {
     published: '',
   });
 
-  const [,setValue] = useContext(InformationContext);
+  const [,setPropertyInfo] = useContext(InformationContext);
   const fileInputRef = useRef(null);
   const fileInputRef2 = useRef(null);
   const fileInputRef3= useRef(null);
@@ -37,80 +37,80 @@ const InputItem = () => {
       [id]: inputVal,
     }));
     if (id === 'name') {
-      setValue((prevValue) => ({
+      setPropertyInfo((prevValue) => ({
         ...prevValue,
         name: inputVal,
       }));
     } else if (id === 'rent') {
-      setValue((prevValue) => ({
+      setPropertyInfo((prevValue) => ({
         ...prevValue,
         rent: Number(inputVal) || 0,
       }));
     }
     else if (id === 'area') {
-      setValue((prevValue) => ({
+      setPropertyInfo((prevValue) => ({
         ...prevValue,
         area: Number(inputVal) || 0,
       }));
     }
     else if (id === 'address') {
-      setValue((prevValue) => ({
+      setPropertyInfo((prevValue) => ({
         ...prevValue,
         address: inputVal,
       }));
     }
     else if (id === 'station') {
-      setValue((prevValue) => ({
+      setPropertyInfo((prevValue) => ({
         ...prevValue,
         station: inputVal,
       }));
     }
     else if (id === 'published') {
-      setValue((prevValue) => ({
+      setPropertyInfo((prevValue) => ({
         ...prevValue,
         published: inputVal,
       }));
     }
     else if (id === 'deposit') {
-      setValue((prevValue) => ({
+      setPropertyInfo((prevValue) => ({
         ...prevValue,
         deposit: Number(inputVal) || 0,
       }));
     }
     else if (id === 'new') {
-      setValue((prevValue) => ({
+      setPropertyInfo((prevValue) => ({
         ...prevValue,
         new: Number(inputVal) || 0,
     }));
   }
   else if (id === 'contract') {
-    setValue((prevValue) => ({
+    setPropertyInfo((prevValue) => ({
       ...prevValue,
       contract: inputVal,
     }));
   }
   else if (id === 'park') {
-    setValue((prevValue) => ({
+    setPropertyInfo((prevValue) => ({
       ...prevValue,
       park: inputVal,
     }));
   }
   else if (id === 'insurance') {
-    setValue((prevValue) => ({
+    setPropertyInfo((prevValue) => ({
       ...prevValue,
       insurance: inputVal,
     }));
   } 
 
   else if (id === 'construction') {
-    setValue((prevValue) => ({
+    setPropertyInfo((prevValue) => ({
       ...prevValue,
       construction: Number(inputVal) || 0,
   }));
 }
   //共益費
   else if (id === 'common') {
-    setValue((prevValue) => ({
+    setPropertyInfo((prevValue) => ({
       ...prevValue,
       common: Number(inputVal) || 0,
   }));
@@ -118,23 +118,23 @@ const InputItem = () => {
 
   // 入居可能日
   else if (id === 'available') {
-    setValue((prevValue) => ({
+    setPropertyInfo((prevValue) => ({
       ...prevValue,
-      construction: Number(inputVal) || 0,
+      available: inputVal,
   }));
 }
 
   //階層
   else if (id === 'hierarchy') {
-    setValue((prevValue) => ({
+    setPropertyInfo((prevValue) => ({
       ...prevValue,
-      construction: Number(inputVal) || 0,
+      hierarchy: Number(inputVal) || 0,
   }));
   }
 
 //設備
   else if (id === 'equipment') {
-    setValue((prevValue) => ({
+    setPropertyInfo((prevValue) => ({
       ...prevValue,
       equipment: inputVal,
     }));
@@ -143,21 +143,21 @@ const InputItem = () => {
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setValue((prev) => ({...prev, exterior: file}));
+      setPropertyInfo((prev) => ({...prev, exterior: file}));
     }
   };
 
   const handleFileChange2 = (e) => {
     const file2 = e.target.files[0];
     if (file2) {
-      setValue((prev) => ({...prev, interview: file2}));
+      setPropertyInfo((prev) => ({...prev, interview: file2}));
     }
   };
 
   const handleFileChange3 = (e) => {
     const file3 = e.target.files[0];
     if (file3) {
-      setValue((prev) => ({...prev, floor: file3}));
+      setPropertyInfo((prev) => ({...prev, floor: file3}));
     }
   };
   
