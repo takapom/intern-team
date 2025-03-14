@@ -6,23 +6,38 @@ import PrintPdf from './components/PrintPdf'
 import './App.css';
 import { createContext, useState } from "react";
 
+// 諸事情により、初期値を全て空文字列に変更しました
 export const InformationContext = createContext([
-    { name : "" , rent : 0 , area: "", address: "", station: "", published: "" , exterior: null, interview: null, floor: null}, () => {}
+  { name : "",
+    rent : "",
+    area: "",
+    address: "",
+    station: "",
+    published: "",
+    deposit: "",
+    new: "",
+    contract: "",
+    park: "",
+    insurance: "",
+    exterior: null,
+    interview: null,
+    floor: null
+  }, () => {}
 ]);
 
 function App() {
   const [value, setValue] = useState({
     name : "",
-    rent : 0,
+    rent : "",
     area: "",
     address: "",
     station: "",
     published: "",
-    deposit:0,
-    new: 0,
-    contract: '',
-    park: '',
-    insurance:'',
+    deposit: "",
+    new: "",
+    contract: "",
+    park: "",
+    insurance: "",
     exterior: null,
     interview: null,
     floor: null

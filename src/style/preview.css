@@ -1,7 +1,7 @@
 .preview-main{
     margin-top: 10%;
     background-color: white;
-    width: 70em;
+    width: 70.5em;
     height: 40em;
     margin-left: 2em;
     border: 1px solid #000;
@@ -67,9 +67,9 @@ h2{
     text-align: center;
 }
 .preview-shosai{
-    width: 44em;
-    height: 33em;
-    margin-left: 1em;
+    width: 44.5em;
+    height: 30em;
+    margin-left: 1em;;
 }
 .preview-info{
     display: flex;
@@ -95,6 +95,7 @@ h2{
     width: 23em;
 }
 .preview-access{
+    align-content: center;
     text-align: left;
     margin-bottom: 1em;
     border: 1px solid #000;
@@ -114,17 +115,24 @@ h2{
 .preview-joken_placeholder{
     align-content: center;
     text-align: center;
-    border: 0.5px solid #000;
+    border: 1px solid #000;
     height: 14.9em;
     width: 23em;
     font-weight: bold;
 }
-
-.preview-joken_placeholder p {
+.preview-joken{
+    align-content: center;
     text-align: left;
-    margin-left: 1.5em;
-    font-size: 1.1rem;
-    font-weight: bold;
+    border: 1px solid #000;
+    height: 14.9em;
+    width: 23em;
+}
+.preview-joken p {
+    text-align: left;
+    margin-bottom: 0em;
+    margin-left: 1em;
+    margin-top: 0.25em;
+    font-size: 1.25em;
 }
 .preview-bukken_info_placeholder{
     align-content: center;
@@ -134,12 +142,30 @@ h2{
     height: 7em;
 }
 .preview-bukken_info{
-    text-align: left;
-    margin-top: 1em;
+    display: flex;
     border: 1px solid #000;
+    width: 44em;
+    margin-top: 1em;
     height: 7em;
 }
-.preview-bukken_info p{
+.preview-bukken_info_left{
+    align-content: center;
+    text-align: left;
+    margin-right: 0.5em;
+    width: 21.5em;
+}
+.preview-bukken_info_left p{
+    margin-bottom: 0em;
+    margin-left: 1em;
+    margin-top: 0.25em;
+    font-size: 1.25em;
+}
+.preview-bukken_info_right{
+    text-align: left;
+    margin-left: 0.5em;
+    width: 21.5em;
+}
+.preview-bukken_info_right p{
     margin-bottom: 0em;
     margin-left: 1em;
     margin-top: 0.25em;

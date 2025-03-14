@@ -1,10 +1,15 @@
 .information-preview{
   display: flex;
+  margin: auto;
   width: 100vw;
   height: auto;
 }
 
 .information{
+  flex-shrink: 0;
+}
+
+.preview{
   flex-shrink: 0;
 }
 
