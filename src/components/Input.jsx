@@ -1,9 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 import { InformationContext } from '../App.jsx';
-import Preview from './preview.jsx';
-import { FilledInput } from '@mui/material';
 import { useRef } from 'react';
-import { blue } from '@mui/material/colors';
+import { common } from '@mui/material/colors';
 
 const InputItem = () => {
   const [inputValue, setInputValue] = useState({
@@ -103,8 +101,45 @@ const InputItem = () => {
       insurance: inputVal,
     }));
   } 
-};
 
+  else if (id === 'construction') {
+    setValue((prevValue) => ({
+      ...prevValue,
+      construction: Number(inputVal) || 0,
+  }));
+}
+  //共益費
+  else if (id === 'common') {
+    setValue((prevValue) => ({
+      ...prevValue,
+      common: Number(inputVal) || 0,
+  }));
+  }
+
+  // 入居可能日
+  else if (id === 'available') {
+    setValue((prevValue) => ({
+      ...prevValue,
+      construction: Number(inputVal) || 0,
+  }));
+}
+
+  //階層
+  else if (id === 'hierarchy') {
+    setValue((prevValue) => ({
+      ...prevValue,
+      construction: Number(inputVal) || 0,
+  }));
+  }
+
+//設備
+  else if (id === 'equipment') {
+    setValue((prevValue) => ({
+      ...prevValue,
+      equipment: inputVal,
+    }));
+  } 
+};
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -196,28 +231,6 @@ const InputItem = () => {
       />
     </div>
 
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-      <label htmlFor="input-field-4" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
-        面積(m²)
-      </label>
-      <input
-        placeholder='99.99'
-        type="text"
-        id="area"
-        value={inputValue.area}
-        onChange={InputChange}
-        style={{
-          width: '300px',
-          height: '20px',
-          fontSize: '16px',
-          padding: '10px',
-          borderRadius: '10px',
-          border: '1px solid #ccc',
-          marginBottom: '20px',
-        }}
-      />
-    </div>
-
 
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
       <label htmlFor="input-field-5" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold"  }}>
@@ -264,33 +277,13 @@ const InputItem = () => {
       />
     </div>
 
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-      <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
-        公開日
-      </label>
-      <input
-        placeholder='YYYY/MM/DD'
-        type="text"
-        id="published"
-        value={inputValue.published}
-        onChange={InputChange}
-        style={{
-          width: '300px',
-          height: '20px',
-          fontSize: '16px',
-          padding: '10px',
-          borderRadius: '10px',
-          border: '1px solid #ccc',
-          marginBottom: '20px',
-        }}
-      />
-    </div>
+  
 
 
     {/* 以下は契約条件 */}
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
       <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
-        敷金/礼金
+        敷金/礼金(円)
       </label>
       <input
         placeholder='40000円'
@@ -312,7 +305,29 @@ const InputItem = () => {
 
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
       <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
-        更新料
+        共益費
+      </label>
+      <input
+        placeholder='火災保険'
+        type="text"
+        id="common"
+        value={inputValue.common}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
+        }}
+      />
+    </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
+        更新料(円)
       </label>
       <input
         placeholder='60000円'
@@ -397,6 +412,146 @@ const InputItem = () => {
         }}
       />
     </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
+        入居可能日
+      </label>
+      <input
+        placeholder='YYYY/MM/DD'
+        type="text"
+        id="available"
+        value={inputValue.available}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
+        }}
+      />
+    </div>
+
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <label htmlFor="input-field-4" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
+        面積(m²)
+      </label>
+      <input
+        placeholder='99.99'
+        type="text"
+        id="area"
+        value={inputValue.area}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
+        }}
+      />
+    </div>
+    </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '1.05rem'}}>
+      <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
+        公開日
+      </label>
+      <input
+        placeholder='YYYY/MM/DD'
+        type="text"
+        id="published"
+        value={inputValue.published}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
+        }}
+      />
+    </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '1.05rem'}}>
+      <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
+      築年数(年)
+      </label>
+      <input
+        placeholder='10年'
+        type="text"
+        id="construction"
+        value={inputValue.construction}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: 
+          
+          '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
+        }}
+      />
+
+    </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '1.05rem'}}>
+      <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
+      階層
+      </label>
+      <input
+        placeholder='〇階'
+        type="text"
+        id="hierarchy"
+        value={inputValue.hierarchy}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: 
+          
+          '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
+        }}
+      />
+    </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '1.05rem'}}>
+      <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
+      設備
+      </label>
+      <input
+        placeholder='トイレ,バス,バルコニー,,,'
+        type="text"
+        id="equipment"
+        value={inputValue.equipment}
+        onChange={InputChange}
+        style={{
+          width: '300px',
+          height: 
+          
+          '20px',
+          fontSize: '16px',
+          padding: '10px',
+          borderRadius: '10px',
+          border: '1px solid #ccc',
+          marginBottom: '20px',
+        }}
+      />
     </div>
 
 

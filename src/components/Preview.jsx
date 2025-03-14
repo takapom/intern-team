@@ -52,6 +52,7 @@ export default function Preview() {
                                     )}
                                 </div>
                             }
+
                             {!propertyInfo.deposit
                                 ? <div className="preview-joken_placeholder">
                                     <h2>契約条件</h2>
@@ -90,6 +91,7 @@ export default function Preview() {
                             </div>
                         </div>
                     }
+
                 </div>
             </div>
         </div>
