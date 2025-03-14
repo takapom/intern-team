@@ -32,3 +32,10 @@ npm run preview
 - HTML
 - CSS
 - JavaScript
+
+増やしたもの
+・共益費
+・入居可能日
+
+・階層
+・設備
