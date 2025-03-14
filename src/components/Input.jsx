@@ -13,7 +13,7 @@ const InputItem = () => {
     published: '',
   });
 
-  const [, setValue] = useContext(InformationContext);
+  const [,setValue] = useContext(InformationContext);
   const fileInputRef = useRef(null);
   const fileInputRef2 = useRef(null);
   const fileInputRef3= useRef(null);
