@@ -1,7 +1,11 @@
+.main-contents{
+  display: flex;
+  justify-content: center;
+}
+
 .information-preview{
   display: flex;
   margin: auto;
-  width: 100vw;
   height: auto;
 }
 

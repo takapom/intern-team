@@ -53,16 +53,18 @@ function App() {
   });
   return (
     <InformationContext.Provider value={[propertyInfo, setPropertyInfo]}>
-    <div className='information-preview'>
-      <div className='information'>
-        <Information />
-      </div>
-      <div className='preview'>
-        <Title />
-        <Preview />
-        <div className='buttons'>
-          <PopUp />
-          <PrintPdf />
+    <div className="main-contents">
+      <div className='information-preview'>
+        <div className='information'>
+          <Information />
+        </div>
+        <div className='preview'>
+          <Title />
+          <Preview />
+          <div className='buttons'>
+            <PopUp />
+            <PrintPdf />
+          </div>
         </div>
       </div>
     </div>

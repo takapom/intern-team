@@ -10,7 +10,7 @@ const Information = () => {
         </div>
         <div
           className='input-form'
-          style={{ maxHeight: "45em", overflowY: "scroll" }}
+          style={{ maxHeight: "100vh", overflowY: "scroll" }}
         >
           <Input />
         </div>
