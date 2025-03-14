@@ -286,7 +286,7 @@ const InputItem = () => {
         敷金/礼金(円)
       </label>
       <input
-        placeholder='40000円'
+        placeholder='40000'
         type="text"
         id="deposit"
         value={inputValue.deposit}
@@ -305,10 +305,10 @@ const InputItem = () => {
 
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
       <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
-        共益費
+        共益費(円)
       </label>
       <input
-        placeholder='火災保険'
+        placeholder='3000'
         type="text"
         id="common"
         value={inputValue.common}
@@ -330,7 +330,7 @@ const InputItem = () => {
         更新料(円)
       </label>
       <input
-        placeholder='60000円'
+        placeholder='60000'
         type="text"
         id="new"
         value={inputValue.new}
@@ -349,10 +349,10 @@ const InputItem = () => {
 
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
       <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
-        契約期間
+        契約期間(年)
       </label>
       <input
-        placeholder='2年'
+        placeholder='2'
         type="text"
         id="contract"
         value={inputValue.contract}
@@ -486,7 +486,7 @@ const InputItem = () => {
       築年数(年)
       </label>
       <input
-        placeholder='10年'
+        placeholder='10'
         type="text"
         id="construction"
         value={inputValue.construction}
@@ -508,10 +508,10 @@ const InputItem = () => {
 
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '1.05rem'}}>
       <label htmlFor="input-field-6" style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold" }}>
-      階層
+      階層(階)
       </label>
       <input
-        placeholder='〇階'
+        placeholder='2'
         type="text"
         id="hierarchy"
         value={inputValue.hierarchy}
@@ -561,7 +561,7 @@ const InputItem = () => {
       flexDirection: 'column',
       alignItems: 'flex-start',
       justifyContent: 'flex-start',
-      marginLeft: '10px',
+      marginLeft: '1.5rem',
       marginBottom: '10px'
       }}>
       <label htmlFor="input-field-6"
@@ -591,7 +591,7 @@ const InputItem = () => {
 
 
 
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '10px', marginBottom: '10px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '1.5rem', marginBottom: '10px' }}>
       <label htmlFor="input-field-6"
        style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold", textAlign: 'center' }}>
         内観をアップロード</label>
@@ -616,7 +616,7 @@ const InputItem = () => {
       />
     </div> 
 
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '10px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '1.5rem' }}>
       <label htmlFor="input-field-6"
        style={{ marginBottom: '5px', fontSize: '18px', fontWeight: "bold", textAlign: 'center' }}>
       間取りをアップロード</label>
