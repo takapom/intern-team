@@ -39,7 +39,7 @@ const InputItem = () => {
     if (id === 'name') {
       setPropertyInfo((prevValue) => ({
         ...prevValue,
-        name: inputVal,
+        name: inputVal || '',
       }));
     } else if (id === 'rent') {
       setPropertyInfo((prevValue) => ({
@@ -56,19 +56,19 @@ const InputItem = () => {
     else if (id === 'address') {
       setPropertyInfo((prevValue) => ({
         ...prevValue,
-        address: inputVal,
+        address: inputVal || '',
       }));
     }
     else if (id === 'station') {
       setPropertyInfo((prevValue) => ({
         ...prevValue,
-        station: inputVal,
+        station: inputVal || '',
       }));
     }
     else if (id === 'published') {
       setPropertyInfo((prevValue) => ({
         ...prevValue,
-        published: inputVal,
+        published: inputVal || '',
       }));
     }
     else if (id === 'deposit') {
@@ -86,19 +86,19 @@ const InputItem = () => {
   else if (id === 'contract') {
     setPropertyInfo((prevValue) => ({
       ...prevValue,
-      contract: inputVal,
+      contract: inputVal || '',
     }));
   }
   else if (id === 'park') {
     setPropertyInfo((prevValue) => ({
       ...prevValue,
-      park: inputVal,
+      park: inputVal || '',
     }));
   }
   else if (id === 'insurance') {
     setPropertyInfo((prevValue) => ({
       ...prevValue,
-      insurance: inputVal,
+      insurance: inputVal || '',
     }));
   } 
 
@@ -120,7 +120,7 @@ const InputItem = () => {
   else if (id === 'available') {
     setPropertyInfo((prevValue) => ({
       ...prevValue,
-      available : Number(inputVal) || '',
+      available : inputVal || '',
   }));
 }
 
