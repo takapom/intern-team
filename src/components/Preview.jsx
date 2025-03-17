@@ -1,4 +1,4 @@
-import "../style/Preview.css";
+import "../style/preview.css";
 import { useContext } from "react";
 import { InformationContext } from "../App";
 import { formatNumber } from "../utils/formatnumber";
