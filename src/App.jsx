@@ -2,7 +2,7 @@ import Information from "./components/Information"
 import Title from "./components/Title"
 import Preview from "./components/Preview"
 import PopUp from './components/Popup'
-import PrintPdf from './components/PrintPdf'
+import PrintPdf from './components/PrintPDF'
 import './App.css';
 import { createContext, useState } from "react";
 
