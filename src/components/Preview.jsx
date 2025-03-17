@@ -1,7 +1,7 @@
 import "../style/preview.css";
 import { useContext } from "react";
 import { InformationContext } from "../App";
-import { formatNumber } from "../utils/formatNumber";
+import { formatNumber } from "../utils/FormatNumber";
 
 export default function Preview() {
     const [propertyInfo] = useContext(InformationContext);
